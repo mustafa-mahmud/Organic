@@ -1,0 +1,11 @@
+.product-slider {
+	%owl-next-prev {
+		outline: none;
+		border: 0;
+
+		&:hover {
+			background-color: transparent;
+			color: $color4;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+.pre-header {
+	grid-column: full-start/full-end;
+	grid-row: row-first-start 1/row-first-end 1;
+
+	display: grid;
+	grid-template-columns: [full-start] var(--gap) [center-start] 1fr [center-end] var(--gap) [full-end];
+
+	padding: 1rem 0;
+	background-color: $color1;
+	color: #666666;
+	font-size: 1.3rem;
+
+	&__container {
+		grid-column: center-start/center-end;
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__left {}
+
+	&__right {
+		display: flex;
+
+		ul {
+			display: flex;
+			align-items: center;
+
+			li {
+				padding: 0 1.5rem;
+
+				a {
+					i {}
+				}
+			}
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+
+			&>* {
+				margin: 0 5px;
+			}
+
+			i {
+				font-size: 1.2rem !important;
+			}
+
+			.lan {
+				position: absolute;
+				background-color: #000;
+				color: $color1;
+				display: flex;
+				flex-direction: column;
+				left: 40%;
+				top: 10rem;
+				opacity: 0;
+				transition: all 0.5s;
+				z-index: 9;
+
+				li {
+					padding: 5px 2rem;
+				}
+			}
+
+			.active {
+				top: 3rem;
+				opacity: 1;
+			}
+
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+
+			i {
+				margin-right: 1rem;
+			}
+		}
+	}
+}

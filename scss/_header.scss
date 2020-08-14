@@ -1,0 +1,94 @@
+.header {
+	grid-column: center-start/center-end;
+
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	align-items: center;
+	gap: 10rem;
+
+	padding: 1rem 0;
+
+	&__logo {
+		grid-column: 1/2;
+	}
+
+	&__desktop-menu {
+		grid-column: 2/3;
+
+		ul {
+			display: flex;
+			justify-content: space-evenly;
+
+			li {
+				a {
+					font-size: 1.5rem;
+					text-transform: uppercase;
+					font-weight: 700;
+					letter-spacing: 1.5px;
+				}
+
+				&:nth-of-type(3) {
+					position: relative;
+
+					&:hover ul {
+						visibility: visible;
+						top: 3rem;
+						opacity: 1;
+					}
+
+					ul {
+						position: absolute;
+						display: grid;
+						grid-template-columns: max-content;
+						top: 10rem;
+						opacity: 0;
+						transition: all 0.5s linear;
+						visibility: hidden;
+
+						li {
+							background-color: $color3;
+							padding: 3px 2rem;
+							margin-bottom: 1px;
+
+							a {
+								color: $color1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__cart {
+		grid-column: 3/4;
+
+		display: flex;
+		align-items: center;
+
+		&>* {
+			padding: 0 2rem;
+			font-size: 1.5rem;
+		}
+
+		span:first-child {
+			i {
+				position: relative;
+
+				&::after {
+					@include headerSpan('1');
+				}
+			}
+		}
+
+		span:nth-of-type(2) {
+			i {
+				position: relative;
+
+				&::after {
+					@include headerSpan('2');
+				}
+			}
+		}
+	}
+}
