@@ -557,7 +557,7 @@ span.separator::before {
   justify-self: stretch;
   font-size: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
   gap: 2rem;
 }
 
@@ -565,8 +565,17 @@ span.separator::before {
   margin: 3rem 0;
 }
 
+.feature__tab .active {
+  border-bottom: 2px solid #7FAD39;
+}
+
 .feature__tab span {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.feature__tab span:not(:last-child) {
+  margin-right: 2rem;
 }
 
 .feature__item {

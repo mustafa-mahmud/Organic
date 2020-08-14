@@ -12,16 +12,24 @@
 		font-size: 2rem;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
 		gap: 2rem;
 	}
 
 	&__tab {
 		margin: 3rem 0;
 
-		span {
-			font-size: 2rem;
+		.active {
+			border-bottom: 2px solid $color4;
+		}
 
+		span {
+			font-size: 1.7rem;
+			cursor: pointer;
+
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
 		}
 	}
 
