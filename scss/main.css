@@ -643,6 +643,15 @@ span.separator::before {
 
 .two-img {
   grid-column: center-start/center-end;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3rem;
+  padding: 5rem 0rem;
+}
+
+.two-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .three-slider {
@@ -650,6 +659,7 @@ span.separator::before {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 3rem;
+  padding: 5rem 0;
 }
 
 .three-slider__latest-container {
