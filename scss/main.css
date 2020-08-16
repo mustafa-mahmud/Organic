@@ -62,7 +62,7 @@ ul {
 }
 
 .h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 900;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -743,6 +743,32 @@ span.separator::before {
 
 .blog {
   grid-column: center-start/center-end;
+  display: grid;
+  padding: 5rem 0;
+}
+
+.blog .title-box {
+  justify-self: center;
+}
+
+.blog__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+}
+
+.blog__box p {
+  margin: 1rem 0;
+}
+
+.blog__box p span {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-right: 2rem;
+}
+
+.blog__box h3 {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .footer {
