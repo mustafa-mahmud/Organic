@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 :root {
   --gap: 10rem;
   --font10: 10rem;
@@ -773,5 +774,110 @@ span.separator::before {
 
 .footer {
   grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: [full-start] var(--gap) [center-start] 1fr [center-end] var(--gap) [full-end];
+  padding: 5rem 0;
+  background-color: #F3F6FA;
+}
+
+.footer input {
+  font-family: 'Abel', sans-serif;
+}
+
+.footer__container {
+  grid-column: center-start/center-end;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+
+.footer__top-info input {
+  font-size: 1.8rem;
+  caret-color: #7FAD39;
+  height: 4rem;
+  padding: 0 1rem;
+  border: 0;
+  background-color: #fff;
+  outline: none;
+  caret-color: red;
+}
+
+.footer__top-info button {
+  border: 0;
+  height: 4rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.5px;
+  background-color: #7FAD39;
+  margin-left: -0.5rem;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.footer__top-info h6 {
+  font-size: 2rem;
+}
+
+.footer__top-info .getMail {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.footer__top-info ul li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__top-info ul li a {
+  font-size-adjust: 1.3rem;
+}
+
+.footer__top-info .social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__top-info .social span {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7FAD39;
+}
+
+.footer__top-info .social span i {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.footer__top-info:nth-of-type(2) div {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template: 3rem;
+}
+
+.footer__top-info:nth-of-type(2) div ul li {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.footer__top-info:nth-of-type(2) div ul li a {
+  font-size: 1.3rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__bottom p {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 /*# sourceMappingURL=main.css.map */
