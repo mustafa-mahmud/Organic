@@ -2,7 +2,8 @@
 	grid-column: center-start/center-end;
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 35rem));
+	justify-content: center;
 	gap: 3rem;
 
 	padding: 5rem 0;

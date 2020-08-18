@@ -7,13 +7,29 @@
 	gap: 10rem;
 
 	padding: 1rem 0;
+	overflow: hidden;
+
+	@media only screen and (max-width: $bp-650) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
 
 	&__logo {
 		grid-column: 1/2;
+
+		@media only screen and (max-width: $bp-650) {
+			grid-column: auto;
+		}
+
 	}
 
 	&__desktop-menu {
 		grid-column: 2/3;
+
+		@media only screen and (max-width: $bp-1000) {
+			display: none;
+		}
 
 		ul {
 			display: flex;
@@ -44,6 +60,7 @@
 						opacity: 0;
 						transition: all 0.5s linear;
 						visibility: hidden;
+						z-index: 999;
 
 						li {
 							background-color: $color3;
@@ -60,15 +77,105 @@
 		}
 	}
 
+	&__mobile-menu {
+		display: none;
+		position: relative;
+
+		@media only screen and (max-width: $bp-1000) {
+			display: block;
+		}
+
+		@media only screen and (max-width: $bp-650) {
+			grid-column: auto;
+			justify-self: flex-end;
+		}
+
+		&:hover .mobile {
+			visibility: visible;
+			opacity: 1;
+			transform: translate(-50%, 0rem);
+		}
+
+		span {
+			border: 1px solid rgba(#000, 0.3);
+			border-radius: 5px;
+			width: 3.5rem;
+			height: 3.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			cursor: pointer;
+
+			i {
+				font-size: 2rem;
+				line-height: 25px;
+				color: #444444;
+			}
+		}
+
+		ul.mobile {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			left: 50%;
+			z-index: 99;
+			overflow: hidden;
+			font-size: 1.4rem;
+			background-color: #222222;
+			color: $color1;
+			transition: all 0.3s linear;
+
+			visibility: hidden;
+			opacity: 0;
+			transform: translate(-50%, 5rem);
+
+			li {
+				width: 17rem;
+				padding-left: 5rem;
+
+				&:nth-of-type(3) {
+
+					ul {
+						li {
+							display: inline-block;
+							padding-left: 0;
+						}
+					}
+				}
+
+				a {
+					text-transform: capitalize;
+
+					&:hover {
+						color: $color4;
+					}
+				}
+			}
+		}
+
+	}
+
 	&__cart {
 		grid-column: 3/4;
 
 		display: flex;
 		align-items: center;
 
+		@media only screen and (max-width: $bp-650) {
+			grid-column: 1/-1;
+
+		}
+
 		&>* {
 			padding: 0 2rem;
 			font-size: 1.5rem;
+
+			@media only screen and (max-width: $bp-650) {
+				padding: 0;
+				margin-right: 4rem;
+			}
+
 		}
 
 		span:first-child {

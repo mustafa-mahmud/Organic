@@ -15,6 +15,14 @@
 
 		display: flex;
 		justify-content: space-between;
+
+		@media only screen and (max-width: $bp-900) {
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-items: center;
+			gap: 1rem;
+		}
+
 	}
 
 	&__left {}
@@ -60,6 +68,7 @@
 				opacity: 0;
 				transition: all 0.5s;
 				z-index: 9;
+				visibility: hidden;
 
 				li {
 					padding: 5px 2rem;
@@ -69,6 +78,7 @@
 			.active {
 				top: 3rem;
 				opacity: 1;
+				visibility: visible;
 			}
 
 		}

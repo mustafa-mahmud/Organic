@@ -13,10 +13,20 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 		gap: 5rem;
+
+		@media only screen and (max-width: $bp-1100) {
+			grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
+			justify-content: center;
+		}
+
+
 	}
 
 	&__box {
-		img {}
+		img {
+			width: 100%;
+			height: 100%;
+		}
 
 		p {
 			margin: 1rem 0;

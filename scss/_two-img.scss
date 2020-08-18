@@ -7,6 +7,13 @@
 
 	padding: 5rem 0rem;
 
+	@media only screen and (max-width: $bp-650) {
+		grid-template-columns: 1fr;
+		grid-auto-flow: row;
+		gap: 2rem;
+	}
+
+
 	img {
 		width: 100%;
 		height: 100%;

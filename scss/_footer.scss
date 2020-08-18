@@ -23,6 +23,12 @@
 		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 		gap: 4rem;
 
+		@media only screen and (max-width: $bp-1100) {
+			grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
+			justify-content: center;
+		}
+
+
 		&-info {
 			input {
 				font-size: 1.8rem;
@@ -112,8 +118,15 @@
 	}
 
 	&__bottom {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 1fr 29rem;
+		gap: 5rem;
+
+		@media only screen and (max-width: $bp-800) {
+			grid-template-columns: 1fr;
+			justify-items: center;
+			gap: 1rem;
+		}
 
 		p {
 			font-size: 1.4rem;

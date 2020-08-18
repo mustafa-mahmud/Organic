@@ -1,6 +1,3 @@
-//MEDIA
-$bp-1200:75em;
-
 //COLOR
 $color1:#F5F5F5;
 $color2:#000;
@@ -9,12 +6,35 @@ $color4:#7FAD39;
 
 :root {
 	--gap: 10rem;
-	--font10: 10rem;
+	--fontH1: 5rem;
 }
 
+//MEDIA
+$bp-1300:81.25em;
+$bp-1200:75em;
+$bp-1100:68.75em;
+$bp-1000:62.5em;
+$bp-900:56.25em;
+$bp-800:50em;
+$bp-650:40.625em;
+$bp-550:34.375em;
 
-@media only screen and (max-width: $bp-1200) {
+@media only screen and (max-width: $bp-550) {}
+
+@media only screen and (max-width: $bp-1300) {
 	:root {
-		--gap: 7rem;
+		--gap: 5rem;
+	}
+}
+
+@media only screen and (max-width: $bp-900) {
+	:root {
+		--gap: 2rem
+	}
+}
+
+@media only screen and (max-width: $bp-550) {
+	:root {
+		--fontH1: 4rem;
 	}
 }

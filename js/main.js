@@ -1,4 +1,4 @@
-//HEADER
+//HEADER================
 const language = document.querySelector('.language');
 const preHeaderRight = document.querySelector('.pre-header');
 const lan = document.querySelector('.lan');
@@ -12,7 +12,7 @@ preHeaderRight.addEventListener('mouseleave', () => {
 
 
 
-//HERO
+//HERO=========================
 const heroLeft = document.querySelector(".hero__left-department");
 const showContent = document.querySelector('.hero__left-department-info');
 
@@ -20,7 +20,7 @@ heroLeft.addEventListener('click', () => {
 	showContent.classList.toggle('active');
 })
 
-//FEATURE
+//FEATURE====================
 const featureTab = document.querySelector(".feature__tab");
 const allSpan = featureTab.querySelectorAll("span");
 
